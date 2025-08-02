@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Profesional - May Avellaneda</title>
     <style>
+.link-arrow {
+    margin-left: auto;
+    color: #667eea;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.items-list li:hover .link-arrow {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.items-list li[onclick] {
+    cursor: pointer;
+}
+
+.items-list li[onclick]:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+    border-left: 3px solid #667eea;
+    padding-left: 15px;
+}
+
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +36,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -111,14 +134,14 @@
             font-size: 1.5rem;
             color: #2c3e50;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .section-subtitle {
             font-size: 0.9rem;
             color: #7f8c8d;
             margin-left: 60px;
-            margin-top: -15px;
+            margin-top: 0px;
         }
 
         .items-list {
@@ -314,7 +337,21 @@
         }
 
         .highlight-section {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .highlight-section .section-title {
+            color: white;
+        }
+
+        .highlight-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .highlight-section .item-text {
+            color: rgba(255, 255, 255, 0.9);
         }
     </style>
 </head>
@@ -387,13 +424,7 @@
                         <p class="section-subtitle">Documentos empresariales listos</p>
                     </div>
                 </div>
-                <ul class="items-list">
-                    <li><div class="item-icon"></div><span class="item-text">Kit de bienvenida editable (TripCo)</span><span class="status-badge">DOCX</span></li>
-                    <li><div class="item-icon"></div><span class="item-text">Actas o documentos modelo</span><span class="status-badge">DOCS</span></li>
-                    <li><div class="item-icon"></div><span class="item-text">Plantillas de mails empresariales</span><span class="status-badge">HTML</span></li>
-                    <li><div class="item-icon"></div><span class="item-text">Propuesta comercial editable</span><span class="status-badge">PPTX</span></li>
-                </ul>
-            </div>
+                <ul class="items-list"> <li onclick="window.open(https://docs.google.com/document/d/1uYNSlg4U_rQ3kFl3wRXlTPl5JJVOExL4V_-SvD6OGRw/edit?tab=t.0)"> <div class="item-icon"></div> <span class="item-text">Mi CV </span> <span class="status-badge">PDF</span> <span class="link-arrow">→</span> </li> <li onclick="window.open(https://docs.google.com/document/d/1QsVugjP2iNp8clf7cj0a_yavHKqE_UoKh5z9h6CqyXk/edit?tab=t.0)"> <div class="item-icon"></div> <span class="item-text">Carta de presentación</span> <span class="status-badge">DOCX</span> <span class="link-arrow">→</span> </li> <li onclick="window.open(https://docs.google.com/forms/d/1KyIU3M6cmaqOXNtY735h0ucR46VKt9PV_GOZl8vHmXs/edit)"> <div class="item-icon"></div> <span class="item-text">Quién soy y qué ofrezco</span> <span class="status-badge">VIDEO</span> <span class="link-arrow">→</span> </li> <li onclick="window.open(https://docs.google.com/document/d/1lb0wG2Mm9yZtmPplb7jeSniZ-FRvtV8y4MuA_py8weQ/edit?tab=t.0)"> <div class="item-icon"></div> <span class="item-text">Imagen de marca / logotipo</span> <span class="status-badge">PNG</span> <span class="link-arrow">→</span> </li> </ul>            </div>
 
             <div class="portfolio-section highlight-section">
                 <div class="section-header">
