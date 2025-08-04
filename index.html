@@ -51,35 +51,43 @@
         .header {
             text-align: center;
             margin-bottom: 50px;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 60px 30px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
             backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             animation: fadeInUp 1s ease-out;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
         }
 
         .header h1 {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
             color: white;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
         }
 
         .header .subtitle {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 20px;
-            font-weight: 300;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .header .description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 700px;
             margin: 0 auto;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
 
         .portfolio-grid {
@@ -199,35 +207,6 @@
             margin-left: auto;
         }
 
-        .cta-section {
-            text-align: center;
-            margin-top: 60px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-            margin: 10px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-        }
-
         .contact-info {
             text-align: center;
             margin-top: 30px;
@@ -319,7 +298,15 @@
 
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .header .description {
+                font-size: 1.2rem;
             }
             
             .portfolio-grid {
@@ -353,184 +340,308 @@
         .highlight-section .item-text {
             color: rgba(255, 255, 255, 0.9);
         }
-.embed-container {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-.portfolio-section {
-  min-height: 450px;
-}
 
+        .embed-container {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
+        .portfolio-section {
+            min-height: 450px;
+        }
+
+        /* CTA FINAL CORREGIDO */
+        #cta-final {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 24px;
+            margin-top: 48px;
+            text-align: center;
+            box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        #cta-final.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #cta-final .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #cta-final h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        #cta-final p {
+            font-size: 20px;
+            margin-bottom: 28px;
+            line-height: 1.4;
+            color: rgba(255,255,255,0.95);
+            font-weight: 500;
+        }
+
+        #cta-final .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #cta-final .cta-btn {
+            background-color: #ffffff;
+            color: #667eea;
+            font-weight: 800;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            min-width: 180px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #cta-final .cta-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            color: #5469d4;
+        }
+
+        #cta-final .cta-btn.whatsapp {
+            background-color: #25D366;
+            color: white;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        #cta-final .cta-btn.whatsapp:hover {
+            background-color: #1ebe5a;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            #cta-final {
+                padding: 40px 20px;
+            }
+            
+            #cta-final h2 {
+                font-size: 26px;
+            }
+            
+            #cta-final p {
+                font-size: 18px;
+            }
+            
+            #cta-final .cta-btn {
+                min-width: 160px;
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+        }
     </style>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>May Avellaneda | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="floating-elements">
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-  </div>
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
 
-  <div class="container">
-    <header class="header">
-      <h1>May Avellaneda</h1>
-      <p class="subtitle">Consultora Digital</p>
-      <p class="description">Transformo ideas en estructuras funcionales, con procesos simples, IA aplicada y diseño con propósito.</p>
-    </header>
+    <div class="container">
+        <header class="header">
+            <h1>May Avellaneda</h1>
+            <p class="subtitle">Consultora Digital</p>
+            <p class="description">Transformo el caos en orden estratégico. Procesos simples, IA aplicada, resultados reales.</p>
+        </header>
 
-    <div class="portfolio-grid">
+        <div class="portfolio-grid">
+            <!-- QUIÉN SOY -->
+            <div class="portfolio-section highlight-section">
+                <div class="section-header">
+                    <div class="section-icon">👤</div>
+                    <div>
+                        <h2 class="section-title">Quién soy</h2>
+                        <p class="section-subtitle">Perfil profesional, historia y visión</p>
+                    </div>
+                </div>
+                <p>Soy consultora digital autodidacta. Emprendedora empedernida y fan declarada de la gestión de proyectos. Combino visión estratégica con acción real. Ese es mi diferencial.</p>
+                <ul class="items-list">
+                    <li onclick="window.open('https://sites.google.com/view/sistemapropio/inicio')">
+                        <div class="item-icon"></div><span class="item-text">CV narrado</span>
+                    </li>
+                    <li onclick="window.open('https://sites.google.com/view/sistemapropio-carta/inicio')">
+                        <div class="item-icon"></div><span class="item-text">Carta de presentación</span>
+                    </li>
+                </ul>
+            </div>
 
-      <!-- QUIÉN SOY -->
-      <div class="portfolio-section highlight-section">
-        <div class="section-header">
-          <div class="section-icon">👤</div>
-          <div>
-            <h2 class="section-title">Quién soy</h2>
-            <p class="section-subtitle">Perfil profesional, historia y visión</p>
-          </div>
+            <!-- QUÉ HAGO -->
+            <div class="portfolio-section">
+                <div class="section-header">
+                    <div class="section-icon">⚙️</div>
+                    <div>
+                        <h2 class="section-title">Qué hago</h2>
+                        <p class="section-subtitle">Metodología, herramientas y experiencia</p>
+                    </div>
+                </div>
+                <p>Traduzco el caos en orden estratégico con herramientas simples. Organizo, documento y automatizo procesos reales con Google Workspace e IA aplicada.</p>
+                <ul class="items-list">
+                    <li onclick="window.open('https://sites.google.com/view/sistemapropioorganizacion?usp=sharing')">
+                        <div class="item-icon"></div><span class="item-text">Organización Digital</span>
+                    </li>
+                    <li onclick="window.open('https://docs.google.com/forms/d/1KyIU3M6cmaqOXNtY735h0ucR46VKt9PV_GOZl8vHmXs/viewform', '_blank')">
+                        <div class="item-icon"></div><span class="item-text">Formulario diagnóstico IA</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- QUÉ OFREZCO -->
+            <div class="portfolio-section highlight-section">
+                <div class="section-header">
+                    <div class="section-icon">🎯</div>
+                    <div>
+                        <h2 class="section-title">Qué ofrezco</h2>
+                        <p class="section-subtitle">Servicios, productos y recursos prácticos</p>
+                    </div>
+                </div>
+                <p>Ofrezco soluciones pensadas para Pymes y emprendimientos reales, con sus tiempos y sus urgencias. Kits digitales, acompañamiento estratégico y portfolios profesionales que funcionan en serio</p>
+                <ul class="items-list">
+                    <li onclick="window.open('https://may-consulting.netlify.app/', '_blank')">
+                        <div class="item-icon"></div><span class="item-text">Smartfolio – Portfolio como producto</span>
+                    </li>
+                    <li onclick="window.open('https://sites.google.com/view/sistemapropio-estrategia/inicio', '_blank')">
+                        <div class="item-icon"></div><span class="item-text">Estrategia para tu Pyme</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BLOG PROFESIONAL -->
+            <div class="portfolio-section">
+                <div class="section-header">
+                    <div class="section-icon">📝</div>
+                    <div>
+                        <h2 class="section-title">Blog profesional</h2>
+                        <p class="section-subtitle">Ideas, herramientas simples y recursos sin humo</p>
+                    </div>
+                </div>
+                <p>Recursos para emprender con herramientas simples. Sin vueltas.</p>
+                <ul class="items-list">
+                    <li onclick="window.open('https://sistemapropiomay.blogspot.com/')">
+                        <div class="item-icon"></div>
+                        <span class="item-text">Leé el blog "Sistema propio"</span>
+                        <span class="status-badge">blog</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- LANDING PAGES -->
+            <div class="portfolio-section">
+                <div class="section-header">
+                    <div class="section-icon">🌐</div>
+                    <div>
+                        <h2 class="section-title">Landing Pages</h2>
+                        <p class="section-subtitle">Diseño funcional para comunicar, vender y captar</p>
+                    </div>
+                </div>
+                <p>Diseños simples, claros y reales. Sin plantillas genéricas: estructuras pensadas para cada proyecto.</p>
+                <ul class="items-list">
+                    <li onclick="window.open('https://sites.google.com/view/tripco-consultora/inicio?authuser=5')">
+                        <div class="item-icon"></div>
+                        <span class="item-text">Landing "TripCo Consultora"</span>
+                    </li>
+                    <li onclick="window.open('https://sites.google.com/view/greenbridgelatam?usp=sharing')">
+                        <div class="item-icon"></div>
+                        <span class="item-text">"Landing GreenBridge"</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- TIENDA DIGITAL -->
+            <div class="portfolio-section">
+                <div class="section-header">
+                    <div class="section-icon">🛒</div>
+                    <div>
+                        <h2 class="section-title">Tienda digital</h2>
+                        <p class="section-subtitle">Kits, cursos y herramientas listas para usar</p>
+                    </div>
+                </div>
+                <p>Recursos descargables creados desde la experiencia: prácticos, probados y pensados para facilitarte el camino.</p>
+                <ul class="items-list">
+                    <li onclick="window.open('https://tripcoconsultora.hotmart.host/repiensa-tu-emprendimiento-con-claridad-y-enfoque-58f415cd-976e-40b9-954f-9ddac271ffcc')">
+                        <div class="item-icon"></div>
+                        <span class="item-text">Emprendé con orden</span>
+                        <span class="status-badge">PDF</span>
+                    </li>
+                    <li onclick="window.open('https://hotmart.com/tu-producto-1', '_blank')">
+                        <div class="item-icon"></div>
+                        <span class="item-text">Curso de IA aplicada a pymes</span>
+                        <span class="status-badge">En breve</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p>Soy consultora digital autodidacta con experiencia real en emprendimientos, gestión operativa y procesos internos. En esta sección te muestro cómo llegué hasta acá y qué me diferencia.</p>
-        <ul class="items-list">
-          <li onclick="window.open('https://sites.google.com/view/sistemapropio/inicio')">
-            <div class="item-icon"></div><span class="item-text">CV narrado</span>
-          </li>
-          <li onclick="window.open('https://sites.google.com/view/sistemapropio-carta/inicio')">
-            <div class="item-icon"></div><span class="item-text">Carta de presentación</span>          </li>
-        </ul>
-      </div>
+    </div>
 
-      <!-- QUÉ HAGO -->
-      <div class="portfolio-section">
-        <div class="section-header">
-          <div class="section-icon">⚙️</div>
-          <div>
-            <h2 class="section-title">Qué hago</h2>
-            <p class="section-subtitle">Metodología, herramientas y experiencia</p>
-          </div>
+    <!-- CTA FINAL CORREGIDO -->
+    <section id="cta-final" role="region" aria-labelledby="cta-final-title">
+        <div class="cta-content">
+            <h2 id="cta-final-title">¿Listo para ordenar tu pyme?</h2>
+            <p>Hablemos. Sin vueltas.</p>
+            <div class="cta-buttons">
+                <a href="mailto:mayradavellaneda@gmail.com" class="cta-btn">Escribime ahora</a>
+                <a href="https://wa.me/5491137606345" class="cta-btn whatsapp">WhatsApp directo</a>
+            </div>
         </div>
-        <p>Organizo, documento y automatizo procesos reales de negocio con herramientas accesibles como Google Workspace e IA aplicada. Todo lo que hago está probado en campo, no en teoría.</p>
-        <ul class="items-list">
-          <li onclick="window.open('https://sites.google.com/view/sistemapropioorganizacion/inicio')">
-            <div class="item-icon"></div><span class="item-text">Organización Digital</span>
-          </li>
-          <li onclick="window.open('https://docs.google.com/forms/d/1KyIU3M6cmaqOXNtY735h0ucR46VKt9PV_GOZl8vHmXs/viewform', '_blank')">
-            <div class="item-icon"></div><span class="item-text">Formulario diagnóstico IA</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- QUÉ OFREZCO -->
-      <div class="portfolio-section highlight-section">
-        <div class="section-header">
-          <div class="section-icon">🎯</div>
-          <div>
-            <h2 class="section-title">Qué ofrezco</h2>
-            <p class="section-subtitle">Servicios, productos y recursos prácticos</p>
-          </div>
-        </div>
-        <p>Ofrezco kits, recursos listos para usar, consultoría directa y construcción de portfolios como producto digital. Diseño soluciones reales para personas reales.</p>
-        <ul class="items-list">
-          <li onclick="window.open('https://may-consulting.netlify.app/', '_blank')">
-            <div class="item-icon"></div><span class="item-text">Smartfolio – Portfolio como producto</span>
-          </li>
-         <li onclick="window.open('https://sites.google.com/view/sistemapropio-estrategia/inicio', '_blank')">
-  <div class="item-icon"></div><span class="item-text">Estrategia para tu Pyme</span>
-</li>
-
-        </ul>
-      </div>
-<!-- BLOG PROFESIONAL -->
-<div class="portfolio-section">
-  <div class="section-header">
-    <div class="section-icon">📝</div>
-    <div>
-      <h2 class="section-title">Blog profesional</h2>
-      <p class="section-subtitle">Ideas, herramientas simples y recursos sin humo</p>
-    </div>
-  </div>
-  <p>Recursos para emprender con herramientas simples. Sin vueltas.</p>
-  <ul class="items-list">
-    <li onclick="window.open('https://sistemapropiomay.blogspot.com/')">
-      <div class="item-icon"></div>
-      <span class="item-text">Leé el blog “Sistema propio”</span>
-      <span class="status-badge">blog</span>
-    </li>
-  </ul>
-</div>
-<!-- LANDING PAGES -->
-<div class="portfolio-section">
-  <div class="section-header">
-    <div class="section-icon">🌐</div>
-    <div>
-      <h2 class="section-title">Landing Pages</h2>
-      <p class="section-subtitle">Diseño funcional para comunicar, vender y captar</p>
-    </div>
-  </div>
-  <p>Diseños simples, claros y reales. Sin plantillas genéricas: estructuras pensadas para cada proyecto.</p>
-  <ul class="items-list">
-    <li onclick="window.open('https://sites.google.com/view/tripco-consultora/inicio?authuser=5')">
-      <div class="item-icon"></div>
-      <span class="item-text">Landing “TripCo Consultora”</span>
-    </li>
-    <li onclick="window.open('https://sites.google.com/view/greenbridgelatam?usp=sharing')">
-      <div class="item-icon"></div>
-      <span class="item-text">"Landing GreenBridge"</span>
-    </li>
-  </ul>
-</div>
-<!-- TIENDA DIGITAL -->
-<div class="portfolio-section">
-  <div class="section-header">
-    <div class="section-icon">🛒</div>
-    <div>
-      <h2 class="section-title">Tienda digital</h2>
-      <p class="section-subtitle">Kits, cursos y herramientas listas para usar</p>
-    </div>
-  </div>
-  <p>Recursos descargables creados desde la experiencia: prácticos, probados y pensados para facilitarte el camino.</p>
-  <ul class="items-list">
-    <li onclick="window.open('https://tripcoconsultora.hotmart.host/repiensa-tu-emprendimiento-con-claridad-y-enfoque-58f415cd-976e-40b9-954f-9ddac271ffcc')">
-      <div class="item-icon"></div>
-      <span class="item-text">Emprendé con orden</span>
-      <span class="status-badge">PDF</span>
-    </li>
-<li onclick="window.open('https://hotmart.com/tu-producto-1', '_blank')">
-      <div class="item-icon"></div>
-      <span class="item-text">Curso de IA aplicada a pymes</span>
-      <span class="status-badge">En breve</span>
-    </li>
-      </ul>
-</div>
-
-  </div>
-
-    <div class="cta-section">
-      <h2 style="color: white; margin-bottom: 20px; font-size: 2rem;">¿Trabajamos junt@s?</h2>
-      <p style="color: rgba(255,255,255,0.9); margin-bottom: 30px; font-size: 1.1rem;">Contactame para armar tu portfolio o profesionalizar tu negocio con herramientas simples y reales.</p>
-      <a href="mailto:mayradavellaneda@gmail.com" class="cta-button">📧 Escribime</a>
-      <a href="https://wa.me/5491137606345" class="cta-button">💬 WhatsApp</a>
-    </div>
+    </section>
 
     <div class="contact-info">
-      <p style="margin-top: 30px; font-size: 1.1rem;">
-        <a href="mailto:mayradavellaneda@gmail.com">mayradavellaneda@gmail.com</a> |
-        <a href="tel:+5491137606345">+54 9 11 3760-6345</a> |
-        <a href="https://linkedin.com/in/mayra-denise-avellaneda" target="_blank">LinkedIn</a>
-      </p>
+        <p style="margin-top: 30px; font-size: 1.1rem;">
+            <a href="mailto:mayradavellaneda@gmail.com">mayradavellaneda@gmail.com</a> |
+            <a href="tel:+5491137606345">+54 9 11 3760-6345</a> |
+            <a href="https://linkedin.com/in/mayra-denise-avellaneda" target="_blank">LinkedIn</a>
+        </p>
     </div>
-  </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cta = document.getElementById("cta-final");
+            
+            function revealOnScroll() {
+                const windowHeight = window.innerHeight;
+                const elementTop = cta.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - 100) {
+                    cta.classList.add("visible");
+                    window.removeEventListener("scroll", revealOnScroll);
+                }
+            }
+            
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Check on load
+        });
+    </script>
 </body>
 </html>
-
 
